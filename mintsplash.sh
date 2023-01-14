@@ -11,12 +11,17 @@ if [ $IMGFILE != "restore" ]; then
     fi
 
     for splashimg in $SPLASH_PATH/nombre*.png
-        do rm -rf $splashimg && cp $IMGFILE $splashimg
+        do sudo rm -rf $splashimg && sudo cp $IMGFILE $splashimg
     done
 
     for splashimg in $SPLASH_PATH/nombre*.png
-        do rm -rf $splashimg && cp $IMGFILE $splashimg
+        do sudo rm -rf $splashimg && sudo cp $IMGFILE $splashimg
     done
+    
+    sudo rm -rf $SPLASH_PATH/logo.png
+    sudo cp $IMGFILE $splashimg
+    sudo rm -rf $SPLASH_PATH/spinner.png
+    sudo wget -O $SPLASH_PATH/spinner.png https://raw.githubusercontent.com/lucasgabmoreno/mintsplash/main/splash/spinner.png    
 
 else
     sudo rm -rf $SPLASH_PATH
