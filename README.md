@@ -5,15 +5,16 @@ Change splash screen in Linux Mint
 ```
 git clone https://github.com/lucasgabmoreno/mintsplash.git
 cd mintsplash
+chmod +x mintsplash.sh
 ```
 
 ## Change splash screen
 Replace [image] with your 100x100px png image filename.
 ```
-./mintsplash [imagefile]
+./mintsplash.sh [imagefile]
 ```
 
 ## Restore default
 ```
-./mintsplash restore
+./mintsplash.sh restore
 ```
