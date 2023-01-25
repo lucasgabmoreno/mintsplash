@@ -6,10 +6,12 @@ IMGFILE=$1
 
 if [ $IMGFILE != "restore" ]; then
 
+    # Backup
     if [ ! -d "$SPLASH_PATH_BAK" ]; then
         sudo cp $SPLASH_PATH $SPLASH_PATH_BAK
     fi
-
+    
+    # Linux Mint
     for splashimg in $SPLASH_PATH/nombre*.png
         do sudo rm -rf $splashimg && sudo cp $IMGFILE $splashimg
     done
@@ -18,10 +20,11 @@ if [ $IMGFILE != "restore" ]; then
         do sudo rm -rf $splashimg && sudo cp $IMGFILE $splashimg
     done
     
+    # LMDE
     sudo rm -rf $SPLASH_PATH/logo.png
-    sudo cp $IMGFILE $splashimg
+    sudo cp $IMGFILE $SPLASH_PATH/logo.png
     sudo rm -rf $SPLASH_PATH/spinner.png
-    sudo wget -O $SPLASH_PATH/spinner.png https://raw.githubusercontent.com/lucasgabmoreno/mintsplash/main/splash/spinner.png    
+    sudo cp transparent.png $SPLASH_PATH/spinner.png
 
 else
     sudo rm -rf $SPLASH_PATH
