@@ -11,7 +11,7 @@ chmod +x mintsplash.sh
 ## Change splash screen
 Replace [image] with your 100x100px png image filename.
 ```
-./mintsplash.sh [imagefile]
+bash mintsplash.sh [imagefile]
 ```
 
 ## Restore default
