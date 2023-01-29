@@ -8,7 +8,7 @@ if [ $IMGFILE != "restore" ]; then
 
     # Backup
     if [ ! -d "$SPLASH_PATH_BAK" ]; then
-        sudo cp $SPLASH_PATH $SPLASH_PATH_BAK
+        sudo cp -rf $SPLASH_PATH $SPLASH_PATH_BAK
     fi
     
     # Linux Mint
@@ -29,7 +29,7 @@ if [ $IMGFILE != "restore" ]; then
     
 else
     sudo rm -rf $SPLASH_PATH
-    sudo cp $SPLASH_PATH_BAK $SPLASH_PATH 
+    sudo cp -rf $SPLASH_PATH_BAK $SPLASH_PATH 
 fi
 
 sudo update-initramfs -u
