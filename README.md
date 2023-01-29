@@ -16,5 +16,5 @@ bash mintsplash.sh [imagefile]
 
 ## Restore default
 ```
-./mintsplash.sh restore
+bash mintsplash.sh restore
 ```
