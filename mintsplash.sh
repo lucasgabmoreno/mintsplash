@@ -21,7 +21,7 @@ if [ $IMGFILE != "restore" ]; then
         done    
     fi
     
-    # LMDE
+    # LMDE ≤ 5
     if [ -f "$SPLASH_PATH/logo.png" ]; then
         sudo rm -rf $SPLASH_PATH/logo.png && sudo cp $IMGFILE $SPLASH_PATH/logo.png
         sudo rm -rf $SPLASH_PATH/spinner.png && sudo cp transparent.png $SPLASH_PATH/spinner.png
